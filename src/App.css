@@ -1,0 +1,25 @@
+.swiper-pagination {
+    width: 1300px;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 0 46px 225px;
+
+}
+
+.custom-pagination-line {
+     ;
+    display: inline-block;
+    width: 5px; /* Ширина линии */
+    height: 21px; /* Высота линии */
+    margin: 0 5px; /* Отступ между линиями */
+    background-color: #ffffff; /* Цвет неактивных линий */
+    transition: background-color 0.3s, height 0.3s;
+    border-radius: 0; /* Убираем закругление */
+}
+
+.swiper-pagination-bullet-active.custom-pagination-line {
+    background-color: #ff0000; /* Цвет активной линии */
+    height: 43px; /* Увеличенная высота активной линии */
+}
