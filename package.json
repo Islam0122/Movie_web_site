@@ -12,8 +12,11 @@
   "dependencies": {
     "antd": "^5.23.1",
     "axios": "^1.7.9",
+    "i18next": "^24.2.2",
+    "i18next-browser-languagedetector": "^8.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.4.0",
     "react-icons": "^5.4.0",
     "react-router": "^7.1.1",
     "swiper": "^11.2.1"

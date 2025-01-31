@@ -1,0 +1,30 @@
+{
+  "watch": "Watch",
+  "loading": "Loading...",
+  "error": "Failed to fetch movies. Please try again later.",
+  "watch_movies_you_like": "Watch movies you like",
+  "site_has_many_movies": "Our site has a huge collection of movies and TV shows for every taste",
+  "movies": "movies",
+  "search_site": "Search the Site",
+  "find_movies": "On our site, you will find the right movies and TV shows for you",
+  "search_placeholder": "Search...",
+  "header": {
+    "home": "Home"
+  },
+  "footer": {
+    "company": "Cinemax",
+    "about": "About Us",
+    "blog": "Blog",
+    "jobs": "Jobs",
+    "offers": "Offers",
+    "help": "Help",
+    "faq": "FAQ",
+    "contacts": "Contacts",
+    "support": "Support",
+    "support_text": "We are always ready to help you. Our operators are online 24/7.",
+    "chat": "Chat with us",
+    "terms": "User Agreement"
+  }
+
+
+}

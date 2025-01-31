@@ -7,6 +7,7 @@ import { Navigation } from "swiper/modules";
 import movieApi from "../service/MovieServise";
 import bn1 from "../assets/icons/bn1.svg";
 import bn2 from "../assets/icons/bn2.svg";
+import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 
 
 const MoviePage = () => {
@@ -23,6 +24,7 @@ const MoviePage = () => {
             try {
                 const data = await movieApi.getMovieById(id);
                 setMovie(data);
+
 
                 const credits = await movieApi.getMovieCredits(id); // Получаем актеров и создателей
                 setCast(credits.cast.slice(0, 10)); // Ограничиваем до 10 актеров
@@ -133,7 +135,7 @@ const MoviePage = () => {
                 </div>
             </div>
 
-            <div className="cast-and-crew mt-10 relative p-6 max-w-[1164px] gap-[50px] mx-auto">
+            <div className="cast-and-crew mt-10 relative p-6 max-w-[1164px]  mx-auto">
                 <h2 className="text-2xl font-bold mb-6 text-white font-montserrat leading-[29.26px] text-left" style={{
                     marginBottom: "50px"
                 }}>
@@ -160,16 +162,19 @@ const MoviePage = () => {
                     {cast.map((person) => (
                         <SwiperSlide key={person.id}>
                             <div
-                                className="relative w-[220px] h-[227px] bg-gray-900 rounded-lg flex flex-col items-center pt-[60px]">
-                                <div className="absolute top-[-30px]">
+                                className="relative w-[220px]  h-[180px]  rounded-lg flex flex-col items-center pt-[60px]" style={{
+                                    marginTop:"79px",
+                                    background: "rgba(26, 26, 26, 1)",
+                            }}>
+                                <div className="absolute top-[-47px]">
                                     <img
                                         src={person.profile_path ? `${img_url}${person.profile_path}` : "/placeholder.jpg"}
                                         alt={person.name}
-                                        className="w-[100px] h-[100px] rounded-full border-4 border-gray-800 object-cover"
+                                        className="w-[130px] h-[130px] rounded-full border-4 border-gray-800 object-cover"
                                     />
                                 </div>
-                                <div className="mt-[40px] text-center">
-                                    <h3 className="text-white text-[18px] font-medium leading-[22px]">
+                                <div className="mt-[40px] text-center ">
+                                    <h3 className="text-white text-[18px] font-medium leading-[22px] mb-[10px]">
                                         {person.name}
                                     </h3>
                                     <p className="text-gray-400 text-[16px] font-normal leading-[19px]">
@@ -181,7 +186,6 @@ const MoviePage = () => {
                     ))}
                 </Swiper>
             </div>
-
 
         </section>
 
